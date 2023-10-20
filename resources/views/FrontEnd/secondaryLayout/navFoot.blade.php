@@ -83,8 +83,8 @@
 <div class="main-menu d-none d-lg-block">
 <nav>
 <ul id="navigation">
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
+<li><a href="{{ route('secondary.index') }}">Home</a></li>
+<li><a href="{{ route('secondary.about') }}">About</a></li>
 <li><a href="courses.html">Courses</a></li>
 <li><a href="instructor.html">Instructors</a></li>
 <li><a href="blog.html">Blog</a>
@@ -172,7 +172,7 @@ Subscribe Now
 <h4>About Us</h4>
 <ul>
 <li><a href="index.html#">Online Learning</a></li>
-<li><a href="index.html#">About Us</a></li>
+<li><a href="{{ route('secondary.about') }}">About Us</a></li>
 <li><a href="index.html#">Careers</a></li>
 <li><a href="index.html#">Press Center</a></li>
 <li><a href="index.html#">Become an Instructor</a></li>
