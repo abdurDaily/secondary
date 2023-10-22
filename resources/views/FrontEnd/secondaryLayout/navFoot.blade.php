@@ -94,7 +94,7 @@
 <li><a href="elements.html">Element</a></li>
 </ul>
 </li>
-<li><a href="contact.html">Contact</a></li>
+<li><a href="{{ route('contact.index') }}">Contact</a></li>
 </ul>
 </nav>
 </div>
@@ -214,7 +214,7 @@ Subscribe Now
 <h4>Spport</h4>
 <ul>
 <li><a href="index.html#">Support</a></li>
-<li><a href="index.html#">Contact Us</a></li>
+<li><a href="{{ route('contact.index') }}">Contact Us</a></li>
 <li><a href="index.html#">System Requirements</a></li>
 <li><a href="index.html#">Register Activation Key</a></li>
 <li><a href="index.html#">Site feedback</a></li>

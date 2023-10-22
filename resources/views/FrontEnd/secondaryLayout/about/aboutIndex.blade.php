@@ -1,9 +1,11 @@
 @extends('FrontEnd.secondaryLayout.navFoot')
 @section('missingFitch')
     
-<main>
 
-    <div class="slider-area">
+
+
+
+<div class="slider-area">
     <div class="slider-height2 d-flex align-items-center">
     <div class="container">
     <div class="row">
@@ -26,10 +28,11 @@
     <h4>Our Mission</h4>
     <p>The IIUC Telecom Club is dedicated to fostering a dynamic and knowledgeable community of students interested in telecommunications, networking, and emerging technologies. Our mission is to provide opportunities for learning, collaboration, and hands-on experience to prepare members for successful careers in the rapidly evolving field of telecommunications.
     </p>
+    <p> Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan.</p>
     </div>
     <div class="about-details-cap mb-50">
     <h4>Our Vision</h4>
-    <p>To be a hub of innovation and expertise, bridging the gap between academic knowledge and industry demands in the field of telecommunications. We envision our members becoming leaders and contributors to the advancements of communication technologies, driving positive change in society.
+    <p>Consectetur adipiscing elit, sued do eiusmod tempor ididunt udfgt labore et dolore magna aliqua. Quis ipsum suspendisces gravida. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.
     </p>
     </div>
     </div>
@@ -92,6 +95,64 @@
     </div>
     
     
+    <div class="testimonial-area fix pt-180 pb-180 section-bg" data-background="assets/img/gallery/section_bg03.png">
+    <div class="container">
+    <div class="row justify-content-center">
+    <div class="col-xl-8 col-lg-9 col-md-9">
+    <div class="h1-testimonial-active">
+    
+    <div class="single-testimonial pt-65">
+    
+    <div class="testimonial-icon mb-45">
+    <img src="assets/img/gallery/testimonial.png" class="ani-btn " alt>
+    </div>
+    
+    <div class="testimonial-caption text-center">
+    <p>You can’t succeed if you just do what others do and
+    follow the well-worn path. You need to create a new and
+    original path for yourself.</p>
+    
+    <div class="testimonial-ratting">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    </div>
+    <div class="rattiong-caption">
+    <span>Clifford Frazier<span> - Colorlib Themes</span> </span>
+    </div>
+    </div>
+    </div>
+    
+    <div class="single-testimonial pt-65">
+    
+    <div class="testimonial-icon mb-45">
+    <img src="assets/img/gallery/testimonial.png" class="ani-btn " alt>
+    </div>
+    
+    <div class="testimonial-caption text-center">
+    <p>You can’t succeed if you just do what others do and
+    follow the well-worn path. You need to create a new and
+    original path for yourself. </p>
+    
+    <div class="testimonial-ratting">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    </div>
+    <div class="rattiong-caption">
+    <span>Clifford Frazier<span> - Colorlib Themes</span> </span>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
     
     
     <div class="about-area section-padding2">
@@ -118,10 +179,10 @@
     
     <div class="about-img ">
     <div class="about-font-img d-none d-lg-block">
-    <img src="{{ asset('assets/img/iiuc/iiuc_mosjid.png') }}" alt>
+    <img src="assets/img/gallery/about2.png" alt>
     </div>
     <div class="about-back-img ">
-    <img src="{{ asset('assets/img/iiuc/ete_alumni.png') }}" alt>
+    <img src="assets/img/gallery/about1.png" alt>
     </div>
     </div>
     </div>
@@ -129,6 +190,5 @@
     </div>
     </div>
     
-    </main>
     
 @endsection

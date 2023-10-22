@@ -29,7 +29,7 @@
             </div>
             <ul class="mobile-menu-wrapper border-top border-theme-29 dark-border-dark-3 py-5">
                 <li>
-                    <a href="javascript:;.html" class="{{ request()->routeIs('home') ? 'menu menu--active' : '' }}">
+                    <a href="{{ route('home') }}" class="{{ request()->routeIs('home') ? 'menu menu--active' : '' }}">
                         <div class="menu__icon"> <i data-feather="home"></i> </div>
                         <div class="menu__title"> Dashboard <i data-feather="chevron-down" class="menu__sub-icon menu__sub-icon--active"></i> </div>
                     </a>
@@ -183,6 +183,30 @@
                     </ul>
                 </li>
 
+
+                <li>
+                    <a href="javascript:;" class="menu">
+                        <div class="menu__icon"> <i data-feather="box"></i> </div>
+                        <div class="menu__title"> club  <i data-feather="chevron-down" class="menu__sub-icon "></i> </div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="{{ route('club.insert') }}" class="menu menu--active">
+                                <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                                <div class="menu__title"> Add New club </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('club.list') }}" class="menu menu--active">
+                                <div class="menu__icon"> <i data-feather="activity"></i> </div>
+                                <div class="menu__title"> club list </div>
+                            </a>
+                        </li>
+
+                        
+                    </ul>
+                </li>
+
       
                 @endhasanyrole
 
@@ -219,7 +243,7 @@
                 <div class="side-nav__devider my-6"></div>
                 <ul>
                     <li>
-                        <a href="javascript:;" class="{{ request()->routeIs('home') ? 'side-menu--active side-menu--open' : '' }} side-menu">
+                        <a href="{{ route('home') }}" class="{{ request()->routeIs('home') ? 'side-menu--active side-menu--open' : '' }} side-menu">
                             <div class="side-menu__icon"> <i data-feather="home"></i> </div>
                             <div class="side-menu__title">
                                 Dashboard 
@@ -383,6 +407,32 @@
 
                         </ul>
                     </li>
+                    <li>
+                        <a href="javascript:;.html" class="side-menu">
+                            <div class="side-menu__icon"> <i data-feather="box"></i> </div>
+                            <div class="side-menu__title">
+                                Club
+                                <div class="side-menu__sub-icon"> <i data-feather="chevron-down"></i> </div>
+                            </div>
+                        </a>
+                        <ul class="">
+                            <li>
+                                <a href="{{ route('club.insert') }}" class="side-menu">
+                                    <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
+                                    <div class="side-menu__title"> Add New Club</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('club.list') }}" class="side-menu">
+                                    <div class="side-menu__icon"> <i data-feather="activity"></i> </div>
+                                    <div class="side-menu__title"> club list</div>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+
                 {{-- ATTENDANCE END  --}}
 
                     @endhasanyrole
@@ -413,7 +463,7 @@
                 <!-- BEGIN: Top Bar -->
                 <div class="top-bar">
                     <!-- BEGIN: Breadcrumb -->
-                    <div class="-intro-x breadcrumb me-auto d-none d-sm-flex"> <a href="index.html">Application</a> <i data-feather="chevron-right" class="breadcrumb__icon"></i> <a href="index.html" class="breadcrumb--active">Dashboard</a> </div>
+                    <div class="-intro-x breadcrumb me-auto d-none d-sm-flex"> <a href="index.html">Application</a> <i data-feather="chevron-right" class="breadcrumb__icon"></i> <a href="{{ route('home') }}" class="breadcrumb--active">Dashboard</a> </div>
                     <!-- END: Breadcrumb -->
                     <!-- BEGIN: Search -->
                     <div class="intro-x position-relative me-3 me-sm-6">
@@ -520,6 +570,7 @@
           @stack('ckeditor')
           @stack('ajax')
           @stack('niceSelect2')
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js" charset="utf-8"></script>
           @stack('sweetAleart2')
         <script src="{{ asset('dist/js/app.js') }}"></script>
 

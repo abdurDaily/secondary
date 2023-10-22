@@ -67,7 +67,18 @@
         </div>
         {{-- COST AMOUNT END--}}
     </div>
+    
+    <div class="test" style="width:100%;">
+        {!! $chart->container() !!}
+    </div>
   </div>
+
+
+  
+  @push('niceSelect2')
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js" charset="utf-8"></script>
+  {!! $chart->script() !!}
+  @endpush
 @endsection
 
 

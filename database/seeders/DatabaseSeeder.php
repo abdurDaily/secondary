@@ -30,6 +30,7 @@ class DatabaseSeeder extends Seeder
         $this->call(AddBatchNumberSeeder::class);
         $this->call(AdmitStudentsSeeder::class);
         $this->call(TeachersSeeder::class);
+        $this->call(clubSeeder::class);
         
     }
 }

@@ -216,97 +216,48 @@
     </div>
     </div>
     </div>
-    <div class="row">
+    <div class="row justify-content-center">
+
+
+
+    @forelse ($club as $data)
     <div class="col-xl-4 col-lg-4 col-md-6">
     
-    <div class="single-course mb-40">
-    <div class="course-img">
-    <img src="{{ asset('assets/club/1.png') }}" alt>
-    </div>
-    <div class="course-caption">
-    <div class="course-cap-top">
-    <h4><a href="index.html#">Graphic Design</a></h4>
-    </div>
-    <div class="course-cap-mid d-flex justify-content-between">
-    <div class="course-ratting">
-    <i class="fas fa-star"></i>
-    <i class="fas fa-star"></i>
-    <i class="fas fa-star"></i>
-    <i class="fas fa-star"></i>
-    <i class="fas fa-star"></i>
-    </div>
-    <ul><li>52 Review</li></ul>
-    </div>
-    <div class="course-cap-bottom d-flex justify-content-between">
-    <ul>
-    <li><i class="ti-user"></i> 562</li>
-    <li><i class="ti-heart"></i> 562</li>
-    </ul>
-    <span>Free</span>
-    </div>
-    </div>
-    </div>
-    </div>
-    <div class="col-xl-4 col-lg-4 col-md-6">
-    
-    <div class="single-course mb-40">
-    <div class="course-img">
-    <img src="{{ asset('assets/club/2.png') }}" alt>
-    </div>
-    <div class="course-caption">
-    <div class="course-cap-top">
-    <h4><a href="index.html#">Web Development</a></h4>
-    </div>
-    <div class="course-cap-mid d-flex justify-content-between">
-    <div class="course-ratting">
-    <i class="fas fa-star"></i>
-    <i class="fas fa-star"></i>
-    <i class="fas fa-star"></i>
-    <i class="fas fa-star"></i>
-    <i class="fas fa-star"></i>
-    </div>
-    <ul><li>52 Review</li></ul>
-    </div>
-    <div class="course-cap-bottom d-flex justify-content-between">
-    <ul>
-    <li><i class="ti-user"></i> 562</li>
-    <li><i class="ti-heart"></i> 562</li>
-    </ul>
-    <span>Free</span>
-    </div>
-    </div>
-    </div>
-    </div>
-    <div class="col-xl-4 col-lg-4 col-md-6">
-    
-    <div class="single-course mb-40">
-    <div class="course-img">
-    <img src="{{ asset('assets/club/3.png') }}" alt>
-    </div>
-    <div class="course-caption">
-    <div class="course-cap-top">
-    <h4><a href="index.html#">Digital Marketing</a></h4>
-    </div>
-    <div class="course-cap-mid d-flex justify-content-between">
-    <div class="course-ratting">
-    <i class="fas fa-star"></i>
-    <i class="fas fa-star"></i>
-    <i class="fas fa-star"></i>
-    <i class="fas fa-star"></i>
-    <i class="fas fa-star"></i>
-    </div>
-    <ul><li>52 Review</li></ul>
-    </div>
-    <div class="course-cap-bottom d-flex justify-content-between">
-    <ul>
-    <li><i class="ti-user"></i> 562</li>
-    <li><i class="ti-heart"></i> 562</li>
-    </ul>
-    <span>Free</span>
-    </div>
-    </div>
-    </div>
-    </div>
+        <div class="single-course mb-40">
+        <div class="course-img">
+        <img src="{{ $data->image }}" alt>
+        </div>
+        <div class="course-caption">
+        <div class="course-cap-top">
+        <h4 style="text-align: center;"><a href="index.html#">{{ $data->club_name }}</a></h4>
+        </div>
+        <div class="course-cap-mid d-flex justify-content-between">
+        <div class="course-ratting">
+        <i class="fas fa-star"></i> &nbsp;
+        <span>{{ $data->presedent_name }}</span>
+        </div>
+        <ul><li>{{ $data->designation }}</li></ul>
+        </div>
+        <div class="course-cap-bottom d-flex justify-content-between">
+        <ul>
+        <li>
+            <a target="_blank" href="{{ $data->fb_profile }}"><span style="color: #000 !importent; "> <i class="ti-user"></i>&nbsp; fb Profile</span></a>
+            
+        </li>
+        <li>
+            <a target="_blank" href="{{ $data->website }}"><span style="color: #000 !importent; "><i class="fas fa-globe"></i>&nbsp; Website</span></a>
+        </li>
+
+        </ul>
+        <span>{{ $data->updated_at->format('d/M/y') }}</span>
+        </div>
+        </div>
+        </div>
+        </div>
+    @empty
+        <h5>no club data found</h5>
+    @endforelse
+
     </div>
     
     <div class="row">
@@ -327,11 +278,11 @@
     
     <div class="section-tittle section-tittle2 text-center mb-70">
     <span>More About Our Faculty</span>
-    <h2>Our Best Teachers</h2>
+    <h2>Our Teachers</h2>
     </div>
     </div>
     </div>
-    <div class="row">
+    <div class="row d-flex justify-content-center">
 
 
     @forelse ($allTeachers as $teacher)
@@ -397,7 +348,7 @@
     <div class="about-font-img d-none d-lg-block">
     <img src="{{ asset('assets/img/iiuc/iiuc_mosjid.png') }}" alt>
     </div>
-    <div class="about-back-img ">
+    <div class="about-back-img" >
     <img src="{{ asset('assets/img/iiuc/ete_alumni.png') }}" alt>
     </div>
     </div>
